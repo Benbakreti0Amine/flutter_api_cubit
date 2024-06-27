@@ -1,0 +1,63 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted to native line endings on checkout.
+*.c text
+*.h text
+
+# Declare files that will always have LF line endings on checkout.
+*.sh text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+
+# Declare files that will always have CRLF line endings on checkout.
+*.bat text eol=crlf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# Miscellaneous
+*.class binary
+*.log text
+*.pyc binary
+*.swp binary
+.DS_Store binary
+.atom/ binary
+.buildlog/ binary
+.history binary
+.svn/ binary
+migrate_working_dir/ binary
+
+# IntelliJ related
+*.iml binary
+*.ipr binary
+*.iws binary
+.idea/ binary
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/ binary
+
+# Flutter/Dart/Pub related
+**/doc/api/ binary
+**/ios/Flutter/.last_build_id binary
+.dart_tool/ binary
+.flutter-plugins text
+.flutter-plugins-dependencies text
+.pub-cache/ binary
+.pub/ binary
+/build/ binary
+
+# Symbolication related
+app.*.symbols binary
+
+# Obfuscation related
+app.*.map.json text
+
+# Android Studio will place build artifacts here
+/android/app/debug binary
+/android/app/profile binary
+/android/app/release binary
