@@ -30,3 +30,12 @@
 
 # Specific files that should always have CRLF line endings.
 *.bat text eol=crlf
+
+# Generated files - keep their existing line endings
+linux/flutter/generated_plugin_registrant.cc -text
+linux/flutter/generated_plugin_registrant.h -text
+linux/flutter/generated_plugins.cmake -text
+macos/Flutter/GeneratedPluginRegistrant.swift -text
+windows/flutter/generated_plugin_registrant.cc -text
+windows/flutter/generated_plugin_registrant.h -text
+windows/flutter/generated_plugins.cmake -text
