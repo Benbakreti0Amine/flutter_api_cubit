@@ -32,11 +32,11 @@ final class GetProfilesuccess extends UserState{
   final GetUserModel user;
 
   GetProfilesuccess({required this.user});
-  
+  //
 }
 final class GetprofileFailed extends UserState{
   final String errMessage;
   GetprofileFailed({required this.errMessage});
 }
 final class GetprofileLoading extends UserState{}
-
+//

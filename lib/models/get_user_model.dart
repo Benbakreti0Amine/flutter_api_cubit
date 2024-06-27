@@ -24,3 +24,4 @@ class GetUserModel {
         location: jsonData['user'][ApiKey.location]);
   }
 }
+//

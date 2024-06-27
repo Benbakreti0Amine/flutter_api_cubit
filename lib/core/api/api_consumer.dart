@@ -23,3 +23,4 @@ abstract class ApiConsumer {
     bool isFromData = false,
   });
 }
+//

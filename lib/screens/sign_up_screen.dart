@@ -190,7 +190,7 @@ class SignUpScreen extends StatelessWidget {
                       obscureText: true,
                       suffixIcon: true,
                       controller: context.read<UserCubit>().confirmPassword,
-                    ),
+                    ),//
                     const SizedBox(height: 22),
                     //!Sign Up Button
                     state is SignUpLoading

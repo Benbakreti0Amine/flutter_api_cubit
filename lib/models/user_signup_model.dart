@@ -8,4 +8,4 @@ class UserSignup {
   factory UserSignup.fromJson(Map <String,dynamic> jsonData){
     return UserSignup(message: jsonData[ApiKey.message]);
   }
-}
+}//
