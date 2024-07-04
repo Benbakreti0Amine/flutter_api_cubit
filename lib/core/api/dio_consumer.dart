@@ -1,15 +1,17 @@
 import 'package:dio/dio.dart';
-import 'package:happy_tech_mastering_api_with_flutter/core/api/api_consumer.dart';
-import 'package:happy_tech_mastering_api_with_flutter/core/api/api_interceptors.dart';
-import 'package:happy_tech_mastering_api_with_flutter/core/api/end_ponits.dart';
-import 'package:happy_tech_mastering_api_with_flutter/core/errors/exceptions.dart';
+
+import '../errors/exceptions.dart';
+import 'api_consumer.dart';
+import 'end_ponits.dart';
+
 
 class DioConsumer extends ApiConsumer {
   final Dio dio;
 
   DioConsumer({required this.dio}) {
     dio.options.baseUrl = EndPoint.baseUrl;
-    dio.interceptors.add(ApiInterceptor());
+    dio.options.headers = {'Content-Type': 'application/json'};
+    // dio.interceptors.add(ApiInterceptor());
     dio.interceptors.add(LogInterceptor(
       request: true,
       requestHeader: true,
@@ -72,6 +74,7 @@ class DioConsumer extends ApiConsumer {
       handleDioExceptions(e);
     }
   }
+
 //
   @override
   Future post(
@@ -86,9 +89,21 @@ class DioConsumer extends ApiConsumer {
         data: isFromData ? FormData.fromMap(data) : data,
         queryParameters: queryParameters,
       );
+      print(response.data);
       return response.data;
     } on DioException catch (e) {
       handleDioExceptions(e);
     }
   }
 }
+// options: Options(
+        //   headers: {
+        //     'Cache-Control': 'no-cache',
+        //     'Content-Type': 'application/json',
+        //     'Host': '<calculated when request is sent>',
+        //     'User-Agent': 'PostmanRuntime/7.39.1',
+        //     'Accept': '*/*',
+        //     'Accept-Encoding': 'gzip, deflate, br',
+        //     'Connection': 'keep-alive',
+        //   },
+        // ),

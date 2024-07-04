@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:happy_tech_mastering_api_with_flutter/cubit/user_cubit.dart';
-import 'package:happy_tech_mastering_api_with_flutter/cubit/user_state.dart';
-import 'package:happy_tech_mastering_api_with_flutter/screens/profile_screen.dart';
-import 'package:happy_tech_mastering_api_with_flutter/widgets/custom_form_button.dart';
-import 'package:happy_tech_mastering_api_with_flutter/widgets/custom_input_field.dart';
-import 'package:happy_tech_mastering_api_with_flutter/widgets/dont_have_an_account.dart';
-import 'package:happy_tech_mastering_api_with_flutter/widgets/forget_password_widget.dart';
-import 'package:happy_tech_mastering_api_with_flutter/widgets/page_header.dart';
-import 'package:happy_tech_mastering_api_with_flutter/widgets/page_heading.dart';
+
+import '../cubit/user_cubit.dart';
+import '../cubit/user_state.dart';
+import '../widgets/custom_form_button.dart';
+import '../widgets/custom_input_field.dart';
+import '../widgets/dont_have_an_account.dart';
+import '../widgets/forget_password_widget.dart';
+import '../widgets/page_header.dart';
+import '../widgets/page_heading.dart';
+
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -25,13 +26,13 @@ class SignInScreen extends StatelessWidget {
                 content: Text("success"),
               ),
             );//
-            context.read<UserCubit>().getUserData();
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ProfileScreen(),
-              ),
-            );
+            // context.read<UserCubit>().getUserData();
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const ProfileScreen(),
+            //   ),
+            // );
           } else if (state is SignInFailure) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(

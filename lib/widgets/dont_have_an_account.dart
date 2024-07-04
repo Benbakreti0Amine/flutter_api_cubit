@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:happy_tech_mastering_api_with_flutter/screens/sign_up_screen.dart';
+
+import '../screens/sign_up_screen.dart';
 
 class DontHaveAnAccountWidget extends StatelessWidget {
   const DontHaveAnAccountWidget({

@@ -1,4 +1,5 @@
-import 'package:happy_tech_mastering_api_with_flutter/core/api/end_ponits.dart';
+
+import '../core/api/end_ponits.dart';
 
 class UserSignup {
   final String message;
